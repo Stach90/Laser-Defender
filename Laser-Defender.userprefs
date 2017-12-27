@@ -1,11 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Enteties\Player\PlayerController.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Enteties\EnemyFormation\EnemySpawner.cs">
     <Files>
-      <File FileName="Assets\Enteties\EnemyFormation\EnemySpawner.cs" Line="42" Column="70" />
-      <File FileName="Assets\Enteties\Player\PlayerController.cs" Line="32" Column="72" />
-      <File FileName="Assets\Enteties\Enemy\EnemyBehaviour.cs" Line="15" Column="12" />
-      <File FileName="Assets\Scripts\Projectile.cs" Line="9" Column="17" />
+      <File FileName="Assets\Enteties\EnemyFormation\EnemySpawner.cs" Line="39" Column="73" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
