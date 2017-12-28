@@ -13,9 +13,12 @@ public class PlayerController : MonoBehaviour {
 	public float firingRate = 0.2f;
 	public float health = 250f; // hp of the player.
 
+
+	public AudioClip FireSound;
+
 	//numbers that restricts our mathf.clamp, made by Camera.main below in Start
-	float xmin;
-	float xmax;
+	private	float xmin;
+	private float xmax;
 
 
 	void Start () {
@@ -31,7 +34,7 @@ public class PlayerController : MonoBehaviour {
 		Vector3 offset = new Vector3(0, 1, 0);
 		GameObject beam = Instantiate(projectile, transform.position + offset, Quaternion.identity) as GameObject; //Quaternion.identity is deleting rotation on projectile
 		beam.rigidbody2D.velocity =  new Vector3(0,projectileSpeed,0); // rigidbody2d.velocity give force for projectile movement
-		
+		AudioSource.PlayClipAtPoint(FireSound, transform.position);
 	}
 	
 
@@ -72,8 +75,15 @@ public class PlayerController : MonoBehaviour {
 			health -= missile.GetDamage();
 			missile.Hit();
 			if (health <= 0) {
-				Destroy(gameObject);
+				Die();
 			}
 		}
+	}
+	
+	void Die(){
+	LevelManager man = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+	man.LoadLevel ("Win Screen");
+	Destroy(gameObject);
+	
 	}
 }
